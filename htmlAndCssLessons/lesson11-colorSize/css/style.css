@@ -1,0 +1,42 @@
+
+.box {
+  /* background-color: red; */
+  /* opacity: 0.1; */
+  /* hex */
+  /* background-color: #a1caaa20; */
+  /* min-3 max-6 (alpha - 8) */
+  /* 0123456789abcdef */
+
+  /* rgb */
+  /* red green blue */
+  /* background-color: rgb(0,0,255); */
+  /* max-255 min - 0 */
+  /* rgba */
+  /* red green blue alpha*/
+
+  /* background-color: rgb(255,0,0,0.1); */
+  /* alpha min-0 max-1 */
+
+  /* hsl */
+  /* background-color: hsl(202, 57%, 54%); */
+  /* background-color: hwb(224 28% 20%); */
+
+  /*Size types  */
+  /* px  */
+  /* 1em = 16px */
+  /* 1rem = 16px */
+  /* vh - viewport height  */
+  /* % */
+
+  /* width: 70%;
+  height: 50vh;
+  background-color: red; */
+  
+}
+
+/* html{
+    font-size: 16px;
+}
+.test-text{
+    font-size: 10em;
+} */

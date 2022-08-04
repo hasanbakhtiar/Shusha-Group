@@ -1,0 +1,43 @@
+/* .box{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+p{
+    display: inline;
+    font-size: 30px;
+    background-color: green;
+} */
+
+/* .box-one { */
+  /* display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-color: red; */
+  /* padding-top: 100px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 100px; */
+  /* saat eqrebi istiqameti referans alinir */
+  /* padding: 10px 20px ; */
+  /* margin-top: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 100px; */
+/* } */
+
+/* .box-one p {
+  color: #fff;
+} */
+
+
+/* .border-box{ */
+    /* width: 100px;
+    height: 100px;
+    background-color: red; */
+    /* border-left: 5px dotted blue;
+    border-right: 5px dashed green; */
+    /* border-top-left-radius:10px ; */
+    /* border-radius: 50%; */
+/* } */
