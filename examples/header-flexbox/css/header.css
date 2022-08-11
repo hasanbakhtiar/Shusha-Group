@@ -1,0 +1,62 @@
+
+header{
+    width: 100%;
+    height: 100px;
+    background-color: rgb(220, 172, 0);
+    display: flex;
+    align-items: center;
+
+}
+header .logo{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+}
+header nav{
+    width: 80%;
+}
+header nav ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+}   
+
+header nav ul li a{
+    color: rgb(0, 0, 0);
+}
+
+
+.hero{
+    width: 100%;
+    height: 90vh;
+    background-image: url('../img/sunset.jpg');
+    /* background-size: contain; */
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    /* background-repeat: no-repeat; */
+}
+
+.hero .hero-bg{
+    width: 100%;
+    height: 90vh;
+    background-color: rgba(0, 0, 0, .5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero .hero-bg h1{
+    font-size: 50px;
+    color: #fff;
+    font-family: sans-serif;
+    width: 40%;
+    background-color: rgba(210, 105, 30,.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    
+
+}
