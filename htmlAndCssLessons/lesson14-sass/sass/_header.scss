@@ -1,0 +1,26 @@
+@mixin mixinname {
+    display: flex;
+    align-items: center;
+    justify-content: center
+} 
+
+
+header {
+  width: 100%;
+  height: 100px;
+  background-color: $myblackcolor;
+  @include mixinname();
+  nav {
+    width: 70%;
+
+    ul {
+      width: 100%;
+      @include mixinname();
+      li{
+        a{
+          font-size: $myfontsize*1.5;
+        }
+      }
+    }
+  }
+}
