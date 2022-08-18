@@ -1,0 +1,25 @@
+@mixin info-more-btn{
+    width: 90px;
+    color: #000;
+    background-color: $myyellow;
+    border: none;
+    padding: 5px;
+}
+
+@mixin center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin around {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}

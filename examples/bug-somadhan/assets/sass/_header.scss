@@ -1,0 +1,65 @@
+header {
+
+  width: 100%;
+  .top-nav {
+    width: 100%;
+    display: flex;
+    .black-line,
+    .yellow-line {
+      width: 50%;
+      height: 40px;
+    }
+    .black-line {
+      background-color: $myblack;
+      @include center();
+      .social-link {
+        @include between();
+        width: 30%;
+        i {
+          color: #fff;
+        }
+      }
+    }
+    .yellow-line{
+        background-color: $myyellow;
+      @include center();
+        .time{
+            width: 20%;
+            display: flex;
+            @include between();
+
+            *{
+                color: #fff;
+            }
+        }
+    }
+  }
+
+  .bottom-nav{
+    width: 100%;
+    height: 70px;
+    @include center();
+    
+    .logo{
+        width: 40%;
+        @include center();
+    }
+    nav{
+        width: 60%;
+
+        ul{
+            width: 80%;
+            @include around();
+            li{
+                a{
+                    color: $myblack;
+                    font-size: 14px;
+                    font-weight: bolder;
+                }
+            }
+        }
+    }
+
+  }
+
+}
