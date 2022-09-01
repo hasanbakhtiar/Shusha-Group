@@ -1,0 +1,38 @@
+// .box{
+//     position: relative;
+//     width: 100px;
+//     height: 100px;
+//     background-color: red;
+//     // animation-name: action;
+//     // animation-duration: 5s;
+//     // animation-iteration-count: infinite;
+//     // animation-delay: 2s;
+//     // animation: action 5s infinite;
+// }
+// @keyframes action{
+//     // from{left: 0px;}
+//     // to{left: 300px;}
+
+//     0%{left: 0; top: 0; background-color: red;}
+//     25%{left: 300px;top: 0; background-color: green;}
+//     50%{left: 300px;top: 300px;background-color: blue; transform: rotate(360deg);}
+//     75%{left: 0px;top: 300px; background-color: yellow; width: 200px;}
+//     100%{left: 0px;top: 0px; background-color: greenyellow; border-radius: 50%;}
+// }
+
+// p{animation: animate 1s infinite ;}
+// @keyframes animate {0%{color: black;}50%{color: red;}100%{color: black;}}
+
+// .close-box {
+//   width: 200px;
+//   height: 200px;
+//   background-color: orange;
+//   clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+//   animation: star 3s infinite linear;
+// }
+
+// @keyframes star {
+//     0%{transform: rotate(0deg);}
+//     50%{transform: rotate(180deg);}
+//     100%{transform: rotate(0deg);}
+// }

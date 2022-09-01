@@ -1,0 +1,75 @@
+header{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(252, 139, 0);
+    nav{
+        width: 70%;
+        ul{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            li{
+                list-style: none;
+                a{
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+
+// max-width = 0dan verilen deyere qederdir
+// min-width = sonsuzluqdandan verilen deyere qederdir
+
+// @media (min-width:690px) {
+//     header{
+//         background-color: aqua;
+//         height: 30vh;
+//         nav{
+//             display: flex;
+//             align-items: center;
+//             justify-content: center;
+//             ul{
+//             width:35%;
+
+//                 flex-direction: column;
+//             }
+//         }
+//     }
+// }
+
+// @media (min-width:1000px) {
+//     header{
+//         background-color: rgb(187, 255, 0);
+//         height: 30vh;
+//         nav{
+//             display: flex;
+//             align-items: center;
+//             justify-content: center;
+//             ul{
+//             width:105%;
+
+//                 flex-direction: column;
+//             }
+//         }
+//     }
+// }
+
+// /* Extra small devices (phones, 600px and down) */
+// @media only screen and (max-width: 600px) {...}
+
+// /* Small devices (portrait tablets and large phones, 600px and up) */
+// @media only screen and (min-width: 600px) {...}
+
+// /* Medium devices (landscape tablets, 768px and up) */
+// @media only screen and (min-width: 768px) {...}
+
+// /* Large devices (laptops/desktops, 992px and up) */
+// @media only screen and (min-width: 992px) {...}
+
+// /* Extra large devices (large laptops and desktops, 1200px and up) */
+// @media only screen and (min-width: 1200px) {...}
