@@ -1,0 +1,35 @@
+@media (max-width: 1150px) {
+   
+  .menu {
+    .menu-div {
+      .menu-nav {
+        ul {
+        display: none;
+        }
+        #mobile-bar{
+            display: block;
+        }
+      }
+    }
+  }
+//   .menu {
+//     height: 100px;
+//     .menu-div {
+//       .menu-nav {
+//         width: 70%;
+//         ul {
+//           width: 50%;
+//           height: 50px;
+//           display: flex;
+//           flex-wrap: wrap;
+//         }
+//       }
+//     }
+//   }
+
+
+
+  #com{
+    display: none;
+  }
+}
