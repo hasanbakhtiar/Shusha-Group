@@ -1,0 +1,38 @@
+// h1::after{
+//     content: " new value";
+//     display: block;
+//     width: 100px;
+//     height: 100px;
+//     background-color: red;
+//     color: #fff;
+// }
+
+// h1::before{
+//     content: " new value";
+//     display: block;
+//     width: 100px;
+//     height: 100px;
+//     background-color: red;
+//     color: #fff;
+// }
+
+.box{
+    position: relative;
+    width: 7%;
+    height: 300px;
+    background-color: red;
+}
+.box::after{
+    transition: 1s;
+    position: absolute;
+    bottom: 0;
+    content: "";
+    display: block;
+    width:100%;
+    height: 0px;
+    background-color: rgba($color: #000000, $alpha: .5);
+}
+.box:hover::after{
+    height: 300px;
+
+}
