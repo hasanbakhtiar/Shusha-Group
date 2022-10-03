@@ -1,0 +1,108 @@
+.case{
+    width: 100%;
+    height: 120vh;
+   background-image: url("../img/kellen-riggin-uIzBpeEqiN4-unsplash.jpg");
+   background-size: cover;
+  
+  
+   .big-box{
+    width: 45%;
+    height: 120vh;
+    background-color: #7564E5;
+    margin-left: 50px;
+    // @include center();
+    // flex-direction: column;
+    .case-eva{
+        @include center();
+        flex-direction: column;
+        .heading{
+            margin-top: 70px;
+        }
+    }
+    .inputs{
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+
+        .name{
+           margin: 10px;
+           input{
+            width: 400px;
+            height: 40px;
+            border-radius: 6px;
+            border: none;
+            padding: 10px;
+            color: grey;
+
+           }
+        }
+
+        .email{
+            margin: 10px;
+            input{
+             width: 400px;
+             height: 40px;
+             border-radius: 6px;
+             border: none;
+             padding: 10px;
+             color: grey;
+            }
+         }
+
+         .location{
+            margin: 10px;
+            input{
+             width: 400px;
+             height: 40px;
+             border-radius: 6px;
+             border: none;
+             padding: 10px;
+             color: grey;
+            }
+         }
+
+         .phone{
+            margin: 10px;
+            input{
+             width: 400px;
+             height: 40px;
+             border-radius: 6px;
+             border: none;
+             padding: 10px;
+             color: grey;
+            }
+         }
+
+         .message{
+            margin: 10px;
+           
+            textarea{
+             width: 400px;
+             height: 190px;
+             border-radius: 6px;
+             border: none;
+              
+             color: grey;
+            }
+         }
+       
+    }
+
+    button{
+          
+          width: 150px;
+          height: 40px;
+          padding: 5px;
+         background-color: rgb(220, 88, 185);
+         border: none;
+         border-radius: 6px;
+         &:hover{
+            background-color: aliceblue;
+         }
+         
+          
+        
+    }
+
+   }
+}

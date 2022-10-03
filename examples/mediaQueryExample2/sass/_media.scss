@@ -1,0 +1,36 @@
+.mobile-menu{
+  display: none;
+}
+
+@media (max-width:660px) {
+
+  nav{
+    display: none !important;
+  }
+  
+  .mobile-menu{
+    display: block;
+  }
+  .case{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .big-box{
+      width: 100%;
+      height: auto;
+      padding-bottom:20px ;
+    }
+  }
+
+  .about-us,.contact,.lawyers {
+    height: auto;
+    flex-direction: column;
+  }
+  .lawyers {
+    .team1,.team2,.team3,.team4{
+
+      width: 100%;
+    }
+  }
+
+}

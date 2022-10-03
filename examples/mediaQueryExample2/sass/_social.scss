@@ -1,0 +1,176 @@
+.social-media{
+    width: 100%;
+    height: 120vh;
+    background-image: url("../img/rowan-heuvel-fdUELL-7-vc-unsplash.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    @include center();
+    // display: flex;
+    // justify-content: flex-start;
+
+    .total{
+       
+        @include center();
+        flex-direction: column;
+    }
+    .socials{
+       width: 40%;
+        height: 80vh;
+        @include center();
+        flex-direction: column;
+        color: #fff ;
+        .iconsocial{
+            @include center();
+            gap: 6px;
+            .air{
+              
+                width: 40px;
+                height: 40px;
+                background-color: #7564E5;
+                border-radius: 50%;
+                padding: 11px;
+            }
+        }
+
+        .iconsocial1{
+            @include center();
+            gap: 6px;
+            .air{
+              
+                width: 40px;
+                height: 40px;
+                background-color: #7564E5;
+                border-radius: 50%;
+                padding: 11px;
+            }
+        }
+        .iconsocial2{
+            @include center();
+            gap: 6px;
+            .air{
+              
+                width: 40px;
+                height: 40px;
+                background-color: #7564E5;
+                border-radius: 50%;
+                padding: 11px;
+            }
+        }
+        .iconsocial3{
+            @include center();
+            gap: 6px;
+            .air{
+              
+                width: 40px;
+                height: 40px;
+                background-color: #7564E5;
+                border-radius: 50%;
+                padding: 11px;
+            }
+        }
+    }
+
+    
+  
+   .big-box{
+    width: 85%;
+    height: 100vh;
+    background-color: #7564E5;
+    margin-left: 50px;
+    // @include center();
+    // flex-direction: column;
+    .case-eva{
+        @include center();
+        flex-direction: column;
+        .heading{
+            margin-top: 70px;
+        }
+    }
+    .inputs{
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+
+        .name{
+           margin: 10px;
+           input{
+            width: 390px;
+            height: 40px;
+            border-radius: 6px;
+            border: none;
+            padding: 10px;
+            color: grey;
+
+           }
+        }
+
+        .email{
+            margin: 10px;
+            input{
+             width: 390px;
+             height: 40px;
+             border-radius: 6px;
+             border: none;
+             padding: 10px;
+             color: grey;
+            }
+         }
+
+         .location{
+            margin: 10px;
+            input{
+             width: 390px;
+             height: 40px;
+             border-radius: 6px;
+             border: none;
+             padding: 10px;
+             color: grey;
+            }
+         }
+
+         .phone{
+            margin: 10px;
+            input{
+             width: 390px;
+             height: 40px;
+             border-radius: 6px;
+             border: none;
+             padding: 10px;
+             color: grey;
+            }
+         }
+
+         .message{
+            margin: 10px;
+           
+            textarea{
+             width: 390px;
+             height: 190px;
+             border-radius: 6px;
+             border: none;
+              
+             color: grey;
+            }
+         }
+       
+    }
+
+    button{
+          
+          width: 150px;
+          height: 40px;
+          padding: 5px;
+         background-color: rgb(220, 88, 185);
+         border: none;
+         border-radius: 6px;
+         margin-top: 10px;
+         &:hover{
+            background-color: aliceblue;
+         }
+         
+          
+        
+    }
+
+   }
+}

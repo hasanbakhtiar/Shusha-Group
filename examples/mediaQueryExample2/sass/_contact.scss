@@ -1,0 +1,11 @@
+.contact{
+    width: 100%;
+    height: 30vh;
+    background-color: #7564E5;
+    @include center();
+    // flex-direction: column;
+    color: #fff;
+    .week{
+        margin-top: 15px;
+    }
+}
