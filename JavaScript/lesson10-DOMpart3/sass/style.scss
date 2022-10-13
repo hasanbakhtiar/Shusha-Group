@@ -1,0 +1,24 @@
+#box{
+    width: 30%;
+    height: 200px;
+    background-color: bisque;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    ul{
+        li{
+            list-style: none;
+        }
+    }
+}
+
+
+.show{
+    transition: 1s;
+    transform: translateX(0);
+}
+
+.hide{
+    transition: 1s;
+    transform: translateX(-500px);
+}
