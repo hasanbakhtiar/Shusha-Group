@@ -1,0 +1,12 @@
+<carlist>
+    <car id='1'>
+        <brand>BMW</brand>
+        <model>X5</model>
+        <color>red</color>
+    </car>
+    <car id='2'>
+        <brand>mercedes</brand>
+        <model>s500</model>
+        <color>white</color>
+    </car>
+</carlist>
