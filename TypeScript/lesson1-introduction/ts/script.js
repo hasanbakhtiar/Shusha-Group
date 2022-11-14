@@ -1,20 +1,5 @@
 // var info:number = 5;
 // console.log(info);
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        if (typeof b !== "function" && b !== null)
-            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 // let infoArr:Array<any> = [1,3,4,5,6,"hello"];
 // let infoArr:number[] = [1,3,4,5,6];
 // console.log(infoArr);
@@ -30,24 +15,46 @@ var __extends = (this && this.__extends) || (function () {
 //     console.log(data(c));
 // }
 // info(10,20);
-var Person = /** @class */ (function () {
-    function Person(name, surname, age) {
-        this.iname = name;
-        this.isurname = surname;
-        this.iage = age;
-    }
-    Person.prototype.sayHi = function () {
-        return this.iname + " " + this.isurname + " " + this.iage;
-    };
-    return Person;
-}());
-var Data = /** @class */ (function (_super) {
-    __extends(Data, _super);
-    function Data(name, surname, age) {
-        return _super.call(this, name, surname, age) || this;
-    }
-    return Data;
-}(Person));
-var newPerson = new Person("Jone", "Morgan", 39);
-console.log(newPerson.sayHi());
-console.log(newPerson.iname);
+// class Person{
+//     protected iname:string;
+//     private isurname:string;
+//     public iage:number;
+//     constructor(name:string,surname:string,age:number){
+//         this.iname=name;
+//         this.isurname=surname;
+//         this.iage=age;
+//     }
+//     sayHi(){
+//         return this.iname +" "+ this.isurname + " " + this.iage;
+//     }
+// }
+// class Data extends Person{
+//     constructor(name:string,surname:string,age:number){
+//         super(name,surname,age);
+//     }
+// }
+// const newPerson = new Person("Jone","Morgan",39);
+// console.log(newPerson.sayHi());
+// // console.log(newPerson.iname);
+var rowList = document.querySelector('.row');
+fetch('https://fakestoreapi.com/products')
+    .then(function (res) { return res.json(); })
+    .then(function (dt) {
+    var card = "";
+    dt.map(function (fd, i) {
+        card += "<div class=\"col-12 col-sm-6 col-md-4 g-3\">\n        <div class=\"card\" >\n        <img  src=".concat(fd.image, " class=\"card-img-top\" alt=\"...\">\n        <div class=\"card-body\">\n          <h5 class=\"card-title\">").concat(fd.title, "</h5>\n          <p class=\"card-text\">").concat(fd.description, "</p>\n          <a href=\"#\" class=\"btn btn-primary\">Add to card</a>\n        </div>\n      </div>\n        </div>");
+    });
+    rowList.innerHTML = card;
+});
+// var info :{
+//     name:string,
+//     surname:string,
+//     age:number,
+//     married:boolean
+// }
+// info = {
+//     name:"Jhone",
+//     surname:"Morgan",
+//     age:25,
+//     married:true
+// }
