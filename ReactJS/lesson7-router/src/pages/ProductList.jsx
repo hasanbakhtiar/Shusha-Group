@@ -1,7 +1,9 @@
+import { Component } from 'react'
 import SingleCard from '../components/SingleCard'
 import productdata from '../data/productdata'
 
- const ProductList =()=> {
+ class ProductList extends Component{
+  render(){
     return (
       <div className='row'>
         {productdata.map((fd,i)=>(
@@ -15,6 +17,7 @@ import productdata from '../data/productdata'
         ))}
       </div>
     )
+}
 }
 
 export default ProductList
