@@ -1,7 +1,10 @@
 import React from 'react'
 import { Link, NavLink } from 'react-router-dom'
+import { useCart } from 'react-use-cart'
 
 const Nav = () => {
+  const {totalItems} = useCart();
+
   return (
 <nav className="navbar navbar-expand-lg bg-dark navbar-dark">
   <div className="container-fluid">
@@ -10,9 +13,9 @@ const Nav = () => {
       <span className="navbar-toggler-icon" />
     </button>
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+      <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
         <li className="nav-item">
-          <NavLink className="nav-link active" aria-current="page" end to=".">Home</NavLink>
+          <NavLink className="nav-link " aria-current="page" end to=".">Home</NavLink>
         </li>
         <li className="nav-item">
           <NavLink className="nav-link" to="products">Products</NavLink>
@@ -20,7 +23,7 @@ const Nav = () => {
      
       </ul>
       <div className="d-flex" >
-        <Link className="btn btn-outline-warning" to="cart"><i class="fa-solid fa-cart-shopping"></i></Link>
+        <Link className="btn btn-outline-warning" to="cart"><i class="fa-solid fa-cart-shopping"></i>({totalItems})</Link>
       </div>
     </div>
   </div>

@@ -1,6 +1,17 @@
 import React from "react";
+import { useCart } from "react-use-cart";
 
 const Cart = () => {
+  const {items,
+    updateItemQuantity,
+    removeItem,
+    isEmpty,
+    cartTotal,
+    emptyCart
+  } = useCart();
+  if (isEmpty) return <div className="d-flex align-items center justify-content-center">
+  <img src="https://i.pinimg.com/originals/66/22/ab/6622ab37c6db6ac166dfec760a2f2939.gif" alt="" />
+  </div>
   return (
     <>
       <table className="table">
@@ -15,24 +26,29 @@ const Cart = () => {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Bag</td>
-            <td>25$</td>
+
+          {items.map((fd,i)=>(
+            <tr>
+            <th scope="row">{i+1}</th>
+            <td><img width={50} src={fd.image} alt={fd.title} /></td>
+            <td>{fd.title}</td>
+            <td>{fd.price * fd.quantity}$</td>
             <td>
-              <button className="btn btn-primary">-</button>
-              <span className="mx-3">{1}</span>
-              <button className="btn btn-primary">+</button>
+              <button className="btn btn-primary"  onClick={() => updateItemQuantity(fd.id, fd.quantity - 1)}>-</button>
+              <span className="mx-3">{fd.quantity}</span>
+              <button className="btn btn-primary" onClick={() => updateItemQuantity(fd.id, fd.quantity + 1)}>+</button>
             </td>
             <td>
-              <button className="btn btn-danger">Del</button>
+              <button className="btn btn-danger" onClick={() => removeItem(fd.id)}>Del</button>
             </td>
           </tr>
+          ))}
+          
         </tbody>
       </table>
-      <h2 className="mt-5">Total Price:200$</h2>
-      <button className="mt-3 btn btn-danger">Empty Cart</button>
+      <p className="alert alert-warning col-3">Maybe, 1$+ for shipping.</p>
+      <h2 className="mt-5">Total Price:{cartTotal}$</h2>
+      <button className="mt-3 btn btn-danger" onClick={()=>{emptyCart()}}>Empty Cart</button>
     </>
   );
 };

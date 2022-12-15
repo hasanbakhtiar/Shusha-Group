@@ -14,7 +14,7 @@ const Products = () => {
     <h1 className='text-center my-5'>Products</h1>
        <div className="row g-5">
        {data.map((fd,i)=>(
-            <SingleCard key={i} photo={fd.image} title={fd.title} desc={fd.description}/>
+            <SingleCard productdata={fd} id={fd.id} key={i} photo={fd.image} title={fd.title} desc={fd.description}/>
         ))}
         </div> 
     </>
