@@ -32,7 +32,7 @@ const Cart = () => {
             <th scope="row">{i+1}</th>
             <td><img width={50} src={fd.image} alt={fd.title} /></td>
             <td>{fd.title}</td>
-            <td>{fd.price * fd.quantity}$</td>
+            <td>{(fd.price * fd.quantity).toFixed(1)}$</td>
             <td>
               <button className="btn btn-primary"  onClick={() => updateItemQuantity(fd.id, fd.quantity - 1)}>-</button>
               <span className="mx-3">{fd.quantity}</span>
@@ -47,7 +47,7 @@ const Cart = () => {
         </tbody>
       </table>
       <p className="alert alert-warning col-3">Maybe, 1$+ for shipping.</p>
-      <h2 className="mt-5">Total Price:{cartTotal}$</h2>
+      <h2 className="mt-5">Total Price:{cartTotal.toFixed(1)}$</h2>
       <button className="mt-3 btn btn-danger" onClick={()=>{emptyCart()}}>Empty Cart</button>
     </>
   );
