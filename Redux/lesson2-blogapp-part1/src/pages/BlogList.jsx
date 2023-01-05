@@ -1,13 +1,22 @@
 import React from 'react'
 import { Row } from 'react-bootstrap'
 import SingleBlog from '../components/SingleBlog'
+import { connect } from 'react-redux'
 
-const BlogList = () => {
+const BlogList = props => {
   return (
-    <Row>
- 
-    </Row>
+<div className='mt-5'>
+        <Row>
+              {props.pvalue.map((item,i)=>(
+                <SingleBlog key={i} photo={item.img} title={item.title} desc={item.desc} id={item.id}/>
+              ))}
+            </Row>
+</div>
   )
 }
 
-export default BlogList
+const mapStateToProps =(state)=>{
+  return{pvalue:state}
+}
+
+export default connect(mapStateToProps)(BlogList)
