@@ -4,18 +4,26 @@ import "./style/bootstrap.min.css";
 import AppRouter from "./routers/AppRouter";
 import Favicon from "react-favicon";
 import { createStore } from "redux";
-
+import { v4 as uuid } from 'uuid';
 // ACTION
-const addBlog = () => ({
+const addBlog = ({title,desc,img}) => ({
   type: "ADD_BLOG",
+  blog:{
+    id:uuid(),
+    title:title,
+    desc:desc,
+    img:img
+  }
 });
 
-const blogs = [];
+
+
+const blogState = [];
 // REDUCER
-const blogReducer = (state = blogs, action) => {
+const blogReducer = (state = blogState, action) => {
   switch (action.type) {
     case "ADD_BLOG":
-      return "add blog";
+      return [...state,action.blog];
     case "REMOVE_BLOG":
       return "add remove";
     case "UPDATE_BLOG":
@@ -31,7 +39,9 @@ store.subscribe(() => {
   console.log(store.getState());
 });
 
-store.dispatch(addBlog());
+store.dispatch(addBlog({title:"new title",desc:"new desc",img:"new img"}))
+store.dispatch(addBlog({title:"blog",desc:"blog desc",img:"blog img"}))
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

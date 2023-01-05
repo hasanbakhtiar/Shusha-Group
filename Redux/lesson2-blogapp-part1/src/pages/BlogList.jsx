@@ -1,15 +1,11 @@
 import React from 'react'
 import { Row } from 'react-bootstrap'
-import SingleCard from '../components/SingleBlog'
+import SingleBlog from '../components/SingleBlog'
 
 const BlogList = () => {
   return (
     <Row>
-        
-        <SingleCard/>
-        <SingleCard/>
-        <SingleCard/>
-        <SingleCard/>
+ 
     </Row>
   )
 }
