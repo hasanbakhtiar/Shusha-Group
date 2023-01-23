@@ -1,0 +1,12 @@
+{
+    "a":{
+        "1":"Hello",
+        "2":"How are you?"
+    },
+    "movies":{
+        "0":"Spiderman",
+        "1":"gifted",
+        "2":"ironman"
+
+    }
+}
