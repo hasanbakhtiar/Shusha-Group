@@ -3,7 +3,8 @@ import {useState,useEffect} from 'react'
 import SingleItem from './SingleItem';
 
 interface DataType{
-    title:string
+    title:string,
+    image:string
 }
 
 const AppApi = () => {
@@ -16,7 +17,7 @@ const AppApi = () => {
   return (
     <div>
         {data.map((item:any,i:number)=>{
-            return <SingleItem name={item.title} key={i}/>
+            return <SingleItem name={item.title} photo={item.image} key={i}/>
            
         })}
     </div>
