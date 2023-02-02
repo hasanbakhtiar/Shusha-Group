@@ -1,8 +1,16 @@
 import {forwardRef, useImperativeHandle,useRef, useState} from 'react'
 import { Button } from 'react-bootstrap'
 
+type PropsType = {}
+    
+type HandleType = {
+  hi: () => void,
+  incFont:()=>void,
+  decFont:()=>void
 
-const MyInput = forwardRef((props,ref)=>{
+}
+
+const MyInput = forwardRef<HandleType>((props:PropsType,ref)=>{
     const [fontSize,setFontSize] = useState(10);
     useImperativeHandle(ref,()=>({
         hi:sayHi,
@@ -20,16 +28,21 @@ const MyInput = forwardRef((props,ref)=>{
 
 
 const AppUseImperativeHandle = () => {
-    const inputRef = useRef<HTMLInputElement>(null);
+    const inputRef = useRef<HandleType>(null);
     const handleClick =()=>{
-       inputRef.current.hi();
+        let iref:any = inputRef.current
+        iref.hi();
     }
   return (
     <div>
         <h1>Hello</h1>
         <MyInput ref={inputRef}/><Button variant='success btn-sm' onClick={handleClick}>click</Button>
-        <button onClick={()=>{inputRef.current.decFont()}}>-</button>
-        <button onClick={()=>{inputRef.current.incFont()}}>+</button>
+        <button onClick={()=>{
+            let iref:any = inputRef.current;
+            iref.decFont()}}>-</button>
+        <button onClick={()=>{
+            let iref:any = inputRef.current;
+            iref.incFont()}}>+</button>
     </div>
   )
 }
